@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franz Kafka | Literary Genius of Existential Anxiety</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #f5f0e8;
+            color: #2c2c2c;
+            line-height: 1.7;
+        }
+
+        /* Dark hero section - Kafkaesque mood */
+        .hero {
+            background: linear-gradient(rgba(20, 20, 30, 0.9), rgba(10, 10, 15, 0.95)), url('https://www.transparenttextures.com/patterns/old-paper.jpg');
+            background-size: cover;
+            color: #e8e0d0;
+            text-align: center;
+            padding: 100px 20px;
+            border-bottom: 3px solid #5a3e2b;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #c0a87a;
+        }
+
+        .hero .dates {
+            font-size: 1rem;
+            opacity: 0.7;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 30px;
+        }
+
+        /* Quote block */
+        .quote-block {
+            background: #2c2418;
+            color: #e8dcc8;
+            padding: 40px;
+            border-radius: 5px;
+            margin: 30px 0;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.2rem;
+            border-left: 5px solid #8b6946;
+        }
+
+        .quote-author {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            padding: 35px;
+            margin-bottom: 35px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid #8b6946;
+        }
+
+        .card h2 {
+            color: #3a2a1a;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e0d5c5;
+            padding-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #5a3e2b;
+            margin: 20px 0 10px 0;
+            font-size: 1.3rem;
+        }
+
+        /* Biography section */
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .bio-image {
+            background: #2c2418;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .bio-image .portrait {
+            font-size: 8rem;
+        }
+
+        .bio-image p {
+            margin-top: 10px;
+            color: #aaa;
+            font-size: 0.8rem;
+        }
+
+        /* Works grid */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .work-card {
+            background: #faf7f2;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+            border: 1px solid #e0d5c5;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .work-card h4 {
+            color: #5a3e2b;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .work-card .year {
+            color: #8b6946;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Themes grid */
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .theme {
+            background: #f0e8dc;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .theme .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .theme h4 {
+            color: #3a2a1a;
+            margin-bottom: 8px;
+        }
+
+        /* Timeline */
+        .timeline {
+            margin: 20px 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0d5c5;
+        }
+
+        .timeline-year {
+            width: 100px;
+            font-weight: bold;
+            color: #8b6946;
+            font-size: 1.1rem;
+        }
+
+        .timeline-desc {
+            flex: 1;
+        }
+
+        /* Legacy section */
+        .legacy-quote {
+            background: #2c2418;
+            color: #e8dcc8;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1510;
+            color: #8a7a6a;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            background: #5a3e2b;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #3a2a1a;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .bio-grid {
+                grid-template-columns: 1fr;
+            }
+            .timeline-item {
+                flex-direction: column;
+            }
+            .timeline-year {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Franz Kafka</h1>
+        <div class="subtitle">"I am a cage, in search of a bird."</div>
+        <div class="dates">1883 - 1924 | Prague, Bohemia</div>
+    </section>
+
+    <div class="container">
+        <!-- Famous Quote -->
+        <div class="quote-block">
+            “A book must be the axe for the frozen sea within us.”
+            <div class="quote-author">— Franz Kafka</div>
+        </div>
+
+        <!-- Biography -->
+        <div class="card">
+            <h2>📖 Biography</h2>
+            <div class="bio-grid">
+                <div class="bio-image">
+                    <div class="portrait">🖋️📚</div>
+                    <p>Franz Kafka, c. 1906</p>
+                </div>
+                <div>
+                    <p><strong>Franz Kafka</strong> (3 July 1883 – 3 June 1924) was a German-speaking Bohemian novelist and short-story writer, widely regarded as one of the major figures of 20th-century literature.</p>
+                    <p>Born into a middle-class German-speaking Jewish family in Prague, Kafka worked as an insurance officer while writing in his spare time. He published only a few short stories during his lifetime — most of his major works were published posthumously by his friend Max Brod, against Kafka's wishes to have them destroyed.</p>
+                    <p>Kafka died of tuberculosis at age 40. His work — blending realism with the fantastical, absurd, and nightmarish — gave rise to the term <strong>"Kafkaesque"</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="card">
+            <h2>⏳ Key Life Events</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">1883</div>
+                    <div class="timeline-desc">Born in Prague to Hermann and Julie Kafka</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1901-1906</div>
+                    <div class="timeline-desc">Studies law at German University in Prague</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1908</div>
+                    <div class="timeline-desc">Begins working at Workers' Accident Insurance Institute</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1912</div>
+                    <div class="timeline-desc">Writes "The Judgment" and begins "The Metamorphosis"</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1915</div>
+                    <div class="timeline-desc">"The Metamorphosis" published</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1917</div>
+                    <div class="timeline-desc">Diagnosed with tuberculosis</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1924</div>
+                    <div class="timeline-desc">Dies in Kierling, Austria; buried in Prague</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Major Works -->
+        <div class="card">
+            <h2>📚 Major Works</h2>
+            <div class="works-grid">
+                <div class="work-card">
+                    <h4>The Metamorphosis</h4>
+                    <div class="year">1915 (Die Verwandlung)</div>
+                    <p>Gregor Samsa wakes up transformed into a giant insect. A surreal exploration of alienation, family duty, and identity.</p>
+                </div>
+                <div class="work-card">
+                    <h4>The Trial</h4>
+                    <div class="year">1925 (posthumous)</div>
+                    <p>Josef K. is arrested and prosecuted by a mysterious, inaccessible court. The ultimate nightmare of bureaucracy.</p>
+                </div>
+                <div class="work-card">
+                    <h4>The Castle</h4>
+                    <div class="year">1926 (posthumous)</div>
+                    <p>A land surveyor struggles against an elusive, authoritarian castle bureaucracy. Unfinished masterpiece.</p>
+                </div>
+                <div class="work-card">
+                    <h4>In the Penal Colony</h4>
+                    <div class="year">1919</div>
+                    <p>A chilling short story about a torture machine that inscribes judgment directly onto the condemned.</p>
+                </div>
+                <div class="work-card">
+                    <h4>Letter to His Father</h4>
+                    <div class="year">1919</div>
+                    <p>A 100-page letter analyzing his difficult relationship with his domineering father.</p>
+                </div>
+                <div class="work-card">
+                    <h4>A Hunger Artist</h4>
+                    <div class="year">1922</div>
+                    <p>A professional faster whose art becomes obsolete — a metaphor for the misunderstood artist.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Themes -->
+        <div class="card">
+            <h2>🎭 Key Themes & "Kafkaesque"</h2>
+            <div class="themes-grid">
+                <div class="theme">
+                    <div class="icon">🏛️</div>
+                    <h4>Bureaucracy</h4>
+                    <p>Impenetrable systems, faceless authority</p>
+                </div>
+                <div class="theme">
+                    <div class="icon">😰</div>
+                    <h4>Alienation</h4>
+                    <p>Isolation from family, society, self</p>
+                </div>
+                <div class="theme">
+                    <div class="icon">⚖️</div>
+                    <h4>Guilt & Absurdity</h4>
+                    <p>Irrational judgment, unexplained accusations</p>
+                </div>
+                <div class="theme">
+                    <div class="icon">🐛</div>
+                    <h4>Transformation</h4>
+                    <p>Physical/metaphorical metamorphosis</p>
+                </div>
+                <div class="theme">
+                    <div class="icon">😴</div>
+                    <h4>Existential Anxiety</h4>
+                    <p>Meaninglessness, dread, paralysis</p>
+                </div>
+                <div class="theme">
+                    <div class="icon">👨‍👦</div>
+                    <h4>Father-Son Conflict</h4>
+                    <p>Authority, shame, inadequacy</p>
+                </div>
+            </div>
+            <p style="margin-top: 20px;"><strong>"Kafkaesque"</strong> describes situations marked by surreal, oppressive, or nightmarish qualities — especially bureaucratic labyrinths where logic fails and individuals are crushed by incomprehensible systems.</p>
+        </div>
+
+        <!-- Legacy -->
+        <div class="card">
+            <h2>🌟 Literary Legacy</h2>
+            <p>Kafka's influence extends far beyond literature:</p>
+            <ul style="margin: 15px 0 0 30px;">
+                <li><strong>Philosophy:</strong> Existentialism, absurdism (Camus, Sartre)</li>
+                <li><strong>Literature:</strong> García Márquez, Borges, Murakami, Coetzee</li>
+                <li><strong>Film:</strong> Terry Gilliam's "Brazil," Orson Welles' "The Trial"</li>
+                <li><strong>Language:</strong> "Kafkaesque" entered English dictionaries</li>
+                <li><strong>Adaptations:</strong> Countless plays, operas, graphic novels, films</li>
+            </ul>
+            <div class="legacy-quote">
+                "Kafka is important to us because his predicament is the predicament of modern man."
+                <div style="margin-top: 10px; font-size: 0.8rem;">— W.H. Auden</div>
+            </div>
+        </div>
+
+        <!-- Presentation Notes -->
+        <div class="card" style="background: #f0e8dc;">
+            <h2>🎤 Presentation Tips</h2>
+            <p><strong>For your Kafka presentation:</strong></p>
+            <ul style="margin-left: 30px;">
+                <li>Start with a striking quote or the opening of <em>The Metamorphosis</em></li>
+                <li>Use visuals of Prague, old photographs, or surreal art</li>
+                <li>Explain "Kafkaesque" with everyday examples (DMV, bureaucracy, confusing forms)</li>
+                <li>Contrast Kafka's quiet life with his explosive literary imagination</li>
+                <li>Discuss why he wanted his works destroyed — and why we're grateful Max Brod disobeyed</li>
+            </ul>
+            <a href="#" class="btn" onclick="window.print(); return false;">📄 Print as Handout</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Franz Kafka | 1883–1924 | "In the fight between you and the world, back the world." — Kafka</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">Created for literary presentation | All quotes and works in public domain</p>
+    </div>
+
+</body>
+</html>
